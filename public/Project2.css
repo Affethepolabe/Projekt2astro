@@ -1,0 +1,339 @@
+/*Header (Apply to all)*/
+@font-face {
+    font-family: "SF-PRO";
+    src: url("Assets/SF-Pro-Display-Regular.otf") format("opentype");
+}
+
+
+body {
+    font-family:"SF-PRO", sans-serif;
+    margin: 0;
+    background-color: #ededed;
+}
+
+#top{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+
+    color: whitesmoke;
+    background-color: black;
+    height: 30px;
+    text-decoration: none;
+    z-index: 999;
+    align-items: center;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background: linear-gradient(0deg, #111 40%, #222 100%);
+    padding: 5px;
+    z-index: 999;
+    display: grid;
+    grid-template: 60px / 15% 70% 15%;
+    grid-template-areas: 
+    "left mid right";
+}
+
+#left{
+    font-size:x-large;
+    grid-area: left;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+#mid{
+    font-size: medium;
+    font-family: "SF-PRO";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+#right{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    grid-area: right;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#right a img{
+    scale: 0.15;
+}
+
+#left a img{
+    height: 100%;
+}
+
+
+/* HEADER NAVBAR */
+
+nav{
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+}
+nav div {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    margin: 0;
+    font-size: 20px;
+    height: 40px;
+    gap: 20px;
+}
+
+nav div li a {
+    text-decoration: none;
+    color: #d0d0d0;
+}
+
+nav div li a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+
+/* HOME */
+
+.Home{
+    display: grid;
+    grid-template: repeat(6, 400px) / 25% 25% 25% 25%;
+    grid-template-areas: 
+    "banner1 banner1 banner1 banner1"
+    "banner1 banner1 banner1 banner1"
+    "banner2 banner2 banner2 banner2"
+    "banner2 banner2 banner2 banner2"
+    "banner3 banner3 banner4 banner5"
+    "banner3 banner3 banner6 banner6"
+}
+
+/* BANNER1 */
+.banner1{
+    grid-area: banner1;
+
+    display: grid;
+    grid-template: 1fr / 10% 80% 10%;
+    grid-template-areas: 
+    "SpacerL SpacerM SpacerR";
+
+    background: radial-gradient(circle, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 70%, rgba(0,0,0,1) 71%, rgba(0,143,217,1) 100%);
+    z-index: 1;
+}
+#header1{
+    grid-area: SpacerM;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #f0f0f0;
+    font-size: 60px;
+}
+#omoss1{
+    grid-area: SpacerM;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 180px;
+    gap: 20px;
+}
+
+#leftdiv1 a{
+    background-color: #2b83f9;
+    padding: 17px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #e0e0e0;
+}
+#leftdiv1 a:hover{
+    color: #fff;
+}
+
+#rightdiv1 a{
+    outline: 2px solid #2b83f9;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #2b83f9;
+    
+}
+#rightdiv1 a:hover{
+    color: #f0f0f0;
+    background-color: #2b83f9; 
+}
+
+/* BANNER2 */
+.banner2{
+    grid-area: banner2;
+
+    background: rgb(214,214,214);
+    background: linear-gradient(0deg, rgb(7, 9, 48) 0%, rgb(36, 111, 149) 46%, rgb(0, 0, 0) 100%);
+    margin-top: 20px;
+    z-index: 0;
+
+    display: grid;
+    grid-template: 1fr / 10vw 80vw 10vw;
+    grid-template-areas: 
+    "Spacer2L Spacer2M Spacer2R";
+}
+#header2{
+    grid-area: Spacer2M;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #f0f0f0;
+    font-size: 60px;
+    margin-top: -400px;
+    font-weight: bold;
+
+
+}
+#omoss2{
+    grid-area: Spacer2M;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    margin-bottom: 300px;
+    gap: 20px;
+}
+
+#leftdiv2 a{
+    background-color: #ffffff;
+    padding: 17px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+#leftdiv2 a:hover{
+    color: #202020;
+}
+
+#rightdiv2 a{
+    outline: 2px solid #ffffff;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+#rightdiv2 a:hover{
+    color: #000000;
+    background-color: rgb(255, 255, 255); 
+}
+
+#banner2img{
+    grid-area: Spacer2M;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    scale: 0.9;
+}
+
+
+/* BANNER3 */
+.banner3{
+    grid-area: banner3;
+
+    background-color: #ffffff;
+    z-index: 0;
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+}
+#header3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000000;
+    font-size: 60px;
+    font-weight: bold;
+
+
+}
+#handlajulklappar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+#handlajulklappar a{
+    background-color: #2b83f9;
+    padding: 17px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #e1e1e1;
+}
+#handlajulklappar a:hover{
+    color: #ffffff;
+}
+
+
+#banne3img{
+    grid-area: Spacer3M;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0.9;
+}
+
+/* BANNER4 */
+.banner4{
+    grid-area: banner4;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BANNER5 */
+.banner5{
+    grid-area: banner5;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BANNER6 */
+.banner6{
+    grid-area: banner6;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

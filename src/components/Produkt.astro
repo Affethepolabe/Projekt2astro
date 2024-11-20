@@ -1,0 +1,80 @@
+---
+interface Props {
+    name: string;
+    description: string;
+    pictureName: string;
+    gpu: string;
+    cpu: string;
+    ram: string;
+    lagring: string;
+    pris: string;
+}
+const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.props;
+---
+<div id="dator">
+    <p id="title">
+        {name}
+    </p>
+    <p id="description">
+        {description}
+    </p>
+    <img src={"/Assets/" + pictureName}>
+    <p id="specs">
+        GPU: {gpu}<br>
+        CPU: {cpu}<br>
+        RAM: {ram}<br>
+        Lagring: {lagring}
+    </p>
+    <p id="pris">
+        {pris} kr
+    </p>
+</div>
+
+
+
+<style>
+    img {
+        object-fit: contain;
+        width: 100%;
+        max-height: 200px;
+    }
+    #title{
+        text-align: center;
+        font-size: xx-large;
+        margin-top: 0;
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    #description{
+        padding-left: 10px;
+        font-size: large;
+    }
+    #specs{
+        padding-left: 10px;
+    }
+    #dator{
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        width: 350px;
+        height: 480px;
+        margin: 40px;
+        opacity: 1;
+        box-shadow: var(--shadow);
+    }
+    #dator:hover{
+        margin: 35px;
+        height: 490px;
+        width: 360px;
+        opacity: 1;
+        box-shadow: 5px 5px 20px rgb(0 0 0 / 0.6);;
+        transition: 0.2s;
+    }
+    #pris{
+        text-align: center;
+        font-size: xx-large;
+        font-family: "SF-PRO";
+        font-weight: 600;
+        color: black;
+    }
+    
+</style>

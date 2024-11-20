@@ -1,0 +1,136 @@
+<!-- HEADER AND NAVBAR -->
+<div class="top">
+    <div id="top">
+        <p>Anpassade Datorer</p>
+        <p>|</p>
+        <p>Hållbara Lösningar</p>
+        <p>|</p>
+        <p>Snabb Service</p>
+    </div>
+</div>
+<header>
+    <div id="left">
+        <a href="Home.html">
+            <img src="Assets/LOGOTYP2.png" alt="LOGOTYP">
+        </a>
+    </div>
+    <div id="mid">
+        <h1>Datorkonsulterna</h1>
+    </div>
+    <div id="right">
+        <a href="#cart">
+            <img src="/Assets/newcart.png">
+        </a>
+    </div>
+</header>
+<nav>
+    <div>
+        <li><a href="/Products">Produkter</a></li>
+        <li><a href="/Services">Tjänster</a></li>
+        <li><a href="/Contact">Vår Vision</a></li>
+    </div>
+</nav>
+
+<style>
+    /*Header (Apply to all)*/
+@font-face {
+    font-family: "SF-PRO";
+    src: url("Assets/SF-Pro-Display-Regular.otf") format("opentype");
+}
+
+
+body {
+    font-family:"SF-PRO", sans-serif;
+    margin: 0;
+    background-color: #ededed;
+}
+
+#top{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+
+    color: whitesmoke;
+    background-color: black;
+    height: 30px;
+    text-decoration: none;
+    z-index: 999;
+    align-items: center;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background: linear-gradient(0deg, #111 40%, #222 100%);
+    padding: 5px;
+    z-index: 999;
+    display: grid;
+    grid-template: 60px / 15% 70% 15%;
+    grid-template-areas: 
+    "left mid right";
+}
+
+#left{
+    font-size:x-large;
+    grid-area: left;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+#mid{
+    font-size: medium;
+    font-family: "SF-PRO";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+#right{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    grid-area: right;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#right a img{
+    scale: 0.15;
+}
+
+#left a img{
+    height: 100%;
+}
+
+
+/* HEADER NAVBAR */
+
+nav{
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+}
+nav div {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    margin: 0;
+    font-size: 20px;
+    height: 40px;
+    gap: 20px;
+}
+
+nav div li a {
+    text-decoration: none;
+    color: #d0d0d0;
+}
+
+nav div li a:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+</style>
