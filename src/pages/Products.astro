@@ -3,10 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Produkt from "../components/Produkt.astro";
 ---
 <Layout>
+    <h1>
+        Våra produkter
+    </h1>
     <div id="datorer">
         <div>
             <Produkt
-            name="RXI-56"
+            name="RXI-57"
             pictureName="6905979_0.webp"
             cpu="i9"
             gpu="1050"
@@ -111,6 +114,15 @@ import Produkt from "../components/Produkt.astro";
         flex-direction: row;
         flex-wrap: wrap;
     }
-
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        background-color: #2b83f9;
+        padding: 10px;
+        color: white;
+        box-shadow: var(--shadow);
+    }
 
 </style>

@@ -1,0 +1,36 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/Form.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datorkonsulterna</title>
+    <style>
+        @font-face {
+            font-family: "SF-PRO";
+            src: url("Assets/SF-Pro-Display-Regular.otf") format("opentype");
+        }
+        body {
+            font-family:"SF-PRO", sans-serif;
+            margin: 0;
+            background-color: #ededed;
+            overflow-x: hidden;
+        }
+        :root{
+            --shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+</style>
+</head>
+
+<body>
+    <Header />
+    <slot />
+    <Form />
+    <Footer />
+</body>
