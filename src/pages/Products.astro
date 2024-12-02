@@ -7,102 +7,34 @@ import Produkt from "../components/Produkt.astro";
         Våra produkter
     </h1>
     <div id="datorer">
-        <div>
-            <Produkt
-            name="RXI-57"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i9"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
-        <div>
-            <Produkt
-            name="RXI-56"
-            pictureName="6905979_0.webp"
-            cpu="i908"
-            gpu="1050"
-            ram="16GB"
-            lagring="2TB"
-            description="noels dator"
-            pris="23467"
-            />
-        </div>
+        <a href="Produkt1.html">
+            <div>
+                <Produkt
+                name="RXI-57"
+                pictureName="6905979_0.webp"
+                cpu="i9"
+                gpu="1050"
+                ram="16GB"
+                lagring="2TB"
+                description="noels dator"
+                pris="23467"
+                />
+            </div>
+        </a>
+        <a href="Produkt2.html">
+            <div>
+                <Produkt
+                name="RXI-57"
+                pictureName="6905979_0.webp"
+                cpu="i9"
+                gpu="1050"
+                ram="16GB"
+                lagring="2TB"
+                description="noels dator"
+                pris="23467"
+                />
+            </div>
+        </a>
     </div>
 </Layout>
 
@@ -113,6 +45,10 @@ import Produkt from "../components/Produkt.astro";
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    #datorer a{
+        text-decoration: none;
+        color: black;
     }
     h1{
         display: flex;

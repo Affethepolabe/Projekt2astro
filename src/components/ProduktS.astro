@@ -1,0 +1,62 @@
+---
+interface Props {
+    name: string;
+    description: string;
+    pictureName: string;
+    gpu: string;
+    cpu: string;
+    ram: string;
+    lagring: string;
+    pris: string;
+}
+const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.props;
+---
+<div class="ProduktS">
+
+
+    <p id="title">
+        {name}
+    </p>
+    <div id="bild">
+        <img src={"/Assets/" + pictureName}>
+    </div>
+    
+    
+   
+</div>
+
+
+
+
+
+<style>
+    .ProduktS{
+    height: 1000px;
+    background-color: white;
+    margin: -39px 30px 0px 30px
+    }
+
+    #title{
+       padding: 50px 0px 40px 100px;
+       font-size: 35px;
+       font-weight: 700;
+
+       border-bottom: 1px solid #d4d4d4;
+
+    }
+    #bild{
+        height: 700px;
+        width: 500px;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    img{
+        scale: 1.6;
+        padding-left: 270px;
+        object-fit: contain;  
+    }
+    
+    
+</style>
