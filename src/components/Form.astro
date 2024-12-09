@@ -1,10 +1,10 @@
 <div id="form">
     <form action="https://formsubmit.co/nils.otto.jonasson@icloud.com" method="post">
-        <textarea id="m1" name="Name" cols="80" rows="2" placeholder="Namn"/>
+        <textarea id="m1" name="Name" cols="50" rows="2" placeholder="Namn"/>
         <br>
-        <textarea id="m1" name="Email" cols="80" rows="3" placeholder="E-postadress" />
+        <textarea id="m1" name="Email" cols="50" rows="3" placeholder="E-postadress" />
         <br>
-        <textarea id="m1" name="Message" cols="80" rows="10" placeholder="Meddelande" />
+        <textarea id="m1" name="Message" cols="50" rows="10" placeholder="Meddelande" />
         <br>
         <br>
         <br>
@@ -20,10 +20,13 @@
     align-items: center;
     margin-top: 40px;
 }
+
 #m1{
     background-color: ;
     box-shadow: var(--shadow);
+    width: 800px
 }
+
 #skicka{
     color: white;
     background-color: #2b83f9;
@@ -45,6 +48,16 @@
     padding-left: 205px;
     padding-right: 205px;
     margin-bottom: 56px;
+}
+
+@media screen and (max-width: 900px) {
+    #skicka{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    #m1{
+        width: 100%;
+    }
 }
 
 </style>
