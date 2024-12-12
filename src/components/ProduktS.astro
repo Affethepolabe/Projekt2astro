@@ -2,14 +2,18 @@
 interface Props {
     name: string;
     description: string;
-    pictureName: string;
+    Ldesc: string;
     gpu: string;
     cpu: string;
     ram: string;
     lagring: string;
     pris: string;
+    pictureName1: string;
+    pictureName2: string;
+    pictureName3: string;
+    pictureName4: string;
 }
-const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.props;
+const {name, description, Ldesc, gpu, cpu, ram, lagring, pris, pictureName1, pictureName2, pictureName3, pictureName4} = Astro.props;
 ---
 <div class="ProduktS">
 
@@ -23,29 +27,27 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     <div class="productpd">
 
         <div id="buttons">
-            <div id="button">
-                <a href="about.html">
-                   
-                </a>
+            <div id="button" class="btn1">
+                <img src={"/Assets/"+ pictureName1} alt="">
             </div>
 
-            <div id="button">
-                <a href="about.html">
-                            
-                </a>
+            <div id="button" class="btn2">
+                <img src={"/Assets/"+ pictureName2} alt="">
             </div>
 
-            <div id="button">
-                <a href="about.html">
-                    
-                </a>
+            <div id="button" class="btn3">
+                <img src={"/Assets/"+ pictureName3} alt="">
+            </div>
+
+            <div id="button" class="btn4">
+                <img src={"/Assets/"+ pictureName4} alt="">
             </div>
         </div>
 
         
 
         <div id="picture">
-            <img src={"/Assets/" + pictureName}>
+            <img src={"/Assets/" + pictureName1} id="produkts-img">
         </div>
 
         
@@ -64,12 +66,40 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
             <p>{lagring}</p>
         </div>
 
+        <div id="Ldesc">
+            {Ldesc}
+
+            <div id="buy">
+                <a href="Contact.html">
+                    Köp nu
+                </a>
+                <div id="pris">
+                    {pris}:-
+                </div>
+            </div>
+        </div>
         
         
 </div>
 
 
+<script is:inline define:vars={{pictureName1, pictureName2, pictureName3, pictureName4}}>
+    document.getElementsByClassName("btn1")[0].onclick = () => {
+        document.getElementById("produkts-img").src = "/Assets/" + pictureName1;
+    }
 
+    document.getElementsByClassName("btn2")[0].onclick = () => {
+        document.getElementById("produkts-img").src = "/Assets/"+ pictureName2;
+    }
+
+    document.getElementsByClassName("btn3")[0].onclick = () => {
+        document.getElementById("produkts-img").src = "/Assets/"+ pictureName3;
+    }
+
+    document.getElementsByClassName("btn4")[0].onclick = () => {
+        document.getElementById("produkts-img").src = "/Assets/"+ pictureName4;
+    }
+</script>
 
 
 <style>
@@ -78,7 +108,11 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     background-color: white;
     margin: -39px 30px 0px 30px
     }
-
+    #produkts-img {
+        height: 600px;
+        width: 400px;
+        object-fit: contain;
+    }
     #title{
        padding: 40px 0px 40px 100px;
        font-size: 35px;
@@ -91,9 +125,10 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
    .productpd{
   
     display: grid;
-    grid-template: 100% / 20% 20% 15% 45%;
+    grid-template: 360px 250px / 300px 500px 250px 180px;
     grid-template-areas: 
-    "buttons picture icons description";
+    "buttons picture icons description"
+    "buttons picture desc desc";
    }
 
    #buttons{
@@ -101,7 +136,7 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     
    }
 
-   #button a{
+   #button{
     outline: 2px solid black;
     color: black;
     font-size: xx-large;
@@ -114,12 +149,26 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     margin: 20px 70px 20px 70px;
     border-radius: 10px;
 
-    height: 40px;
+    height: 70px;
+    transition: 0.2s;
 
-   
+    box-shadow: var(--shadow);
+
    }
 
+   #button:hover{
+    transition: 0.2s;
+    scale: 1.05;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 0.6);;
+    cursor: pointer;
+   }
 
+   #button img{
+    height: 120px;
+    width: 80px;
+
+    object-fit: contain;
+   }
    
    #picture{
     grid-area: picture;
@@ -131,16 +180,22 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+
+    outline: 2px solid black;
+    margin-right: -180px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    
    }
 
    #icons img{
     height: 80px;
     scale: 0.7;
+    padding-right: 300px;
    }
 
    #description{
     grid-area: description;
-
 
     display: flex;
     flex-direction: column;
@@ -150,13 +205,55 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
 
     margin-left: -60px;
     padding-top: 30px;
+
+    
+    border-radius: 30px;
+    
    
    }
 
    #description p{
         padding-bottom: 20px;
+        color: rgb(0, 0, 0);
+        
    }
 
+   #Ldesc{
+    grid-area: desc;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    outline: 2px solid black;
+    
+   }
 
-  
+   #buy{
+    display: flex;
+    justify-content: left;
+    padding-top: 20px;
+   }
+
+   #buy a{
+    outline: 2px solid #2b83f9;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #2b83f9;
+    }
+
+    #buy a:hover{
+    color: #f0f0f0;
+    background-color: #2b83f9; 
+    }
+
+    #pris{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        font-weight: bolder;
+        font-size: x-large;
+    }
 </style>
