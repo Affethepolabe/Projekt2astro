@@ -1,15 +1,69 @@
 <div id="footer">
-    Hej
+    <div id="flex">
+        <div id="kontakt">
+            Kontaktuppgifter
+            <p>kontakt@datorkonsulterna.se</p>
+            <p>kontaktformulär <span><a href="Contact.html">här</a></span></p>
+        </div>
+
+        <div id="social">
+            Sociala medier
+            <p>Instagram: DatorkonsulternaUF</p>
+            <p>Facebook: Datorkonsulterna</p>
+        </div>
+    </div>
+
+    <div id="copy">
+        Copyright © Datorkonsulterna UF 2024
+    </div>
+    
 </div>
 
+
+
 <style>
+
+    
     #footer{
         background-color: rgb(26, 26, 26);
+        display: grid;
+        font-size: x-large;
+        color: white;
+        height: 200px;
+
+        grid-template: 1fr 1fr / 1fr;
+        grid-template-areas: 
+        "Social"
+        "copy";
+        
+    }
+
+    #flex{
+        grid-area: Social;
         display: flex;
         justify-content: center;
-        align-items: center;
-        font-size: xx-large;
+        flex-direction: row;
+        gap: 60px;
+        padding-top: 20px;
+        
+    }
+
+    #kontakt p{
+        font-size: medium;
+    }
+
+    #kontakt p span a{
         color: white;
-        height: 300px;
+        font-weight: bold;
+    }
+
+    #social p{
+        font-size: medium;
+    }
+
+    #copy{
+        grid-area: copy;
+        display: flex;
+        justify-content: center;
     }
 </style>

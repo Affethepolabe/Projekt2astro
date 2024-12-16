@@ -20,10 +20,10 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     </p>
     <img src={"/Assets/" + pictureName}>
     <p id="specs">
-        GPU: {gpu}<br>
-        CPU: {cpu}<br>
-        RAM: {ram}<br>
-        Lagring: {lagring}<br>
+        GPU: <span>{gpu}</span> <br>
+        CPU: <span>{cpu}</span><br>
+        RAM: <span>{ram}</span><br>
+        Lagring: <span>{lagring}</span><br>
         <p id="pris">
             {pris} kr
         </p>
@@ -51,12 +51,19 @@ const {name, description, pictureName, gpu, cpu, ram, lagring, pris} = Astro.pro
     }
     #specs{
         padding-left: 10px;
+        font-weight: bold;
+        font-size: large;
+    }
+    #specs span{
+        font-style: italic;
+        font-weight: 400;
+        font-size: medium;
     }
     #dator{
         background-color: rgb(255, 255, 255);
         border-radius: 20px;
         width: 300px;
-        height: 480px;
+        height: 500px;
         margin: 30px;
         opacity: 1;
         box-shadow: var(--shadow);
